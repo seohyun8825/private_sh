@@ -85,11 +85,11 @@ def get_params_dict(output_text):
 
 
 def get_params_dict_hard_code(output_text=None):
-    # 하드코딩된 split ratio와 regional prompt
+    # 하드코딩된 프롬프트
     final_split_ratio = "1,2,1;1,1,1"  # 고정된 split ratio
     regional_prompt = (
         "Captures the dog with an engaging head tilt, eyes bright with curiosity, "
-        "and a playful grin. BREAK Shows the dog lying down, paws folded, with a calm expression, "
+        "and a playful grin, with the letter Thumbnail in the left top part. BREAK Shows the dog lying down, paws folded, with a calm expression, "
         "its fur slightly ruffled. BREAK Presents the dog mid-play, leaping with ears perked up, "
         "full of energetic joy. BREAK Features the dog sitting serenely, a gentle breeze rustling its fur, "
         "with a calm and serene gaze."

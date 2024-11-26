@@ -706,9 +706,18 @@ class RegionalDiffusionXLPipeline(
                 raise ValueError(
                     f"`ip_adapter_image_embeds` has to be a list of 3D or 4D tensors but is {ip_adapter_image_embeds[0].ndim}D"
                 )
-
-    # Copied from diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion.StableDiffusionPipeline.prepare_latents
-    def prepare_latents(self, batch_size, num_channels_latents, height, width, dtype, device, generator, latents=None):
+    def prepare_latents(
+        self,
+        batch_size,
+        num_channels_latents,
+        height,
+        width,
+        dtype,
+        device,
+        generator,
+        latents=None,
+        strength=0.5,  # strength 파라미터 (0.0 ~ 1.0)
+    ):
         shape = (batch_size, num_channels_latents, height // self.vae_scale_factor, width // self.vae_scale_factor)
         if isinstance(generator, list) and len(generator) != batch_size:
             raise ValueError(
@@ -717,13 +726,31 @@ class RegionalDiffusionXLPipeline(
             )
 
         if latents is None:
+            # 랜덤 노이즈 생성
             latents = randn_tensor(shape, generator=generator, device=device, dtype=dtype)
+            latents = latents * self.scheduler.init_noise_sigma
+            timesteps = self.scheduler.timesteps  # 전체 타임스텝 사용
         else:
-            latents = latents.to(device)
+            latents = latents.to(device=device, dtype=dtype)
+            # 현재 사용되는 타임스텝 수
+            num_inference_steps = len(self.scheduler.timesteps)
+            # start_step 계산
+            start_step = int(num_inference_steps * (1 - strength))
+            # 시작 타임스텝 가져오기
+            timestep = self.scheduler.timesteps[start_step]
+            # **timestep을 배치 크기에 맞는 1차원 텐서로 변환**
+            if not isinstance(timestep, torch.Tensor):
+                timestep = torch.tensor(timestep, device=device, dtype=dtype)
+            timestep = timestep.repeat(batch_size)
+            # 노이즈 생성 및 추가
+            noise = randn_tensor(latents.shape, generator=generator, device=device, dtype=dtype)
+            latents = self.scheduler.add_noise(latents, noise, timestep)
+            # 사용할 타임스텝 설정
+            timesteps = self.scheduler.timesteps[start_step:]
 
-        # scale the initial noise by the standard deviation required by the scheduler
-        latents = latents * self.scheduler.init_noise_sigma
-        return latents
+        return latents, timesteps
+
+
 
     def _get_add_time_ids(
         self, original_size, crops_coords_top_left, target_size, dtype, text_encoder_projection_dim=None
@@ -1210,8 +1237,6 @@ class RegionalDiffusionXLPipeline(
 
             # VAE를 사용하여 잠재 공간으로 인코딩
             user_image_latent = self.vae.encode(combined_image_tensor).latent_dist.sample()
-
-            # 스케일링 팩터 적용
             user_image_latent = user_image_latent * self.vae.config.scaling_factor
 
             # 디코딩하여 확인 (선택 사항)
@@ -1224,6 +1249,8 @@ class RegionalDiffusionXLPipeline(
             decoded_image_pil.save(os.path.join(output_dir, "decoded_image_from_latent.png"))
             print(f"Decoded image from latent saved at: {os.path.join(output_dir, 'decoded_image_from_latent.png')}")
 
+
+
         else:
             user_image_latent = None
 
@@ -1235,7 +1262,7 @@ class RegionalDiffusionXLPipeline(
 
         # 3. 표준 랜덤 초기화된 잠재 변수 준비
         num_channels_latents = self.unet.config.in_channels
-        standard_latents = self.prepare_latents(
+        standard_latents, timesteps = self.prepare_latents(
             batch_size * num_images_per_prompt,
             num_channels_latents,
             height,
@@ -1243,10 +1270,10 @@ class RegionalDiffusionXLPipeline(
             prompt_embeds.dtype,
             device,
             generator,
-            latents,  # 사전에 지정된 잠재 변수가 있을 경우 사용
+            user_image_latent,  # 사전에 지정된 잠재 변수가 있을 경우 사용
         )
         print("Standard latents shape:", standard_latents.shape)
-
+        '''
         # 4. 사용자 이미지 잠재 벡터를 노이즈로 변환
         if user_image_latent is not None:
             # **스케줄러 복사 제거**
@@ -1262,14 +1289,15 @@ class RegionalDiffusionXLPipeline(
             print(f"User image latents as noise mean: {user_image_latents_as_noise.mean().item()}, std: {user_image_latents_as_noise.std().item()}")
 
             # 아래 줄 중 하나를 선택하여 사용하세요
-            #latents = standard_latents  # 표준 랜덤 초기화된 잠재 벡터 사용
-            latents = user_image_latents_as_noise  # 사용자 이미지 잠재 벡터 사용
+            latents = standard_latents  # 표준 랜덤 초기화된 잠재 벡터 사용
+            #latents = user_image_latents_as_noise  # 사용자 이미지 잠재 벡터 사용
 
         else:
             # 사용자 이미지가 없을 경우 표준 잠재 벡터 사용
             latents = standard_latents
+        '''
+        latents = standard_latents
 
-        print("Latents shape:", latents.shape)
 
         # 5. 추가 단계 매개변수 준비
         extra_step_kwargs = self.prepare_extra_step_kwargs(generator, eta)
@@ -1345,6 +1373,11 @@ class RegionalDiffusionXLPipeline(
             ).to(device=device, dtype=latents.dtype)
 
         self._num_timesteps = len(timesteps)
+
+        self.scheduler.set_timesteps(len(timesteps), device=device)
+        self.scheduler.timesteps = timesteps
+ 
+
         with self.progress_bar(total=num_inference_steps) as progress_bar:
             for i, t in enumerate(timesteps):
                 if self.interrupt:

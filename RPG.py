@@ -20,10 +20,10 @@ regional_prompt = para_dict['Regional Prompt']
 negative_prompt = ""
 
 image_path= [
-    "/home/kubig/RPG-DiffusionMaster/happy_sitting.jpg",
-    "/home/kubig/RPG-DiffusionMaster/a.jpg",
-    "/home/kubig/RPG-DiffusionMaster/b.jpg",
-    "/home/kubig/RPG-DiffusionMaster/d.jpg",
+    "/home/kubig/RPG-DiffusionMaster/test_1.jpg",
+    "/home/kubig/RPG-DiffusionMaster/test2.jpg",
+    "/home/kubig/RPG-DiffusionMaster/test3.jpg",
+    "/home/kubig/RPG-DiffusionMaster/test4.jpg",
 ]
 print("split",split_ratio)
 images = pipe(
