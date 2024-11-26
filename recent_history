@@ -1,0 +1,521 @@
+[Step 9] Noise pred mean: 0.0205078125, std: 0.548828125
+[Step 9] Noise pred (uncond) mean: 0.020111083984375, std: 0.548828125
+[Step 9] Noise pred (text) mean: 0.020904541015625, std: 0.54931640625
+[Step 9] Noise pred (final) mean: 0.0256805419921875, std: 0.56982421875
+[Step 9] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 50%|█████████████████████████▌                         | 10/20 [00:05<00:05,  1.79it/s]
+[Step 10] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 10] Noise pred mean: 0.01103973388671875, std: 0.5361328125
+[Step 10] Noise pred (uncond) mean: 0.0108642578125, std: 0.53564453125
+[Step 10] Noise pred (text) mean: 0.0112152099609375, std: 0.5361328125
+[Step 10] Noise pred (final) mean: 0.01332855224609375, std: 0.5498046875
+[Step 10] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 55%|████████████████████████████                       | 11/20 [00:06<00:05,  1.79it/s]
+[Step 11] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 11] Noise pred mean: 0.00737762451171875, std: 0.533203125
+[Step 11] Noise pred (uncond) mean: 0.007305145263671875, std: 0.533203125
+[Step 11] Noise pred (text) mean: 0.007450103759765625, std: 0.53369140625
+[Step 11] Noise pred (final) mean: 0.0083160400390625, std: 0.5517578125
+[Step 11] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 60%|██████████████████████████████▌                    | 12/20 [00:06<00:04,  1.79it/s]
+[Step 12] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 12] Noise pred mean: 0.01052093505859375, std: 0.51220703125
+[Step 12] Noise pred (uncond) mean: 0.0099029541015625, std: 0.513671875
+[Step 12] Noise pred (text) mean: 0.01113128662109375, std: 0.51123046875
+[Step 12] Noise pred (final) mean: 0.018524169921875, std: 0.5576171875
+[Step 12] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 65%|█████████████████████████████████▏                 | 13/20 [00:07<00:03,  1.79it/s]
+[Step 13] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 13] Noise pred mean: 0.0024871826171875, std: 0.414306640625
+[Step 13] Noise pred (uncond) mean: 0.0009436607360839844, std: 0.415283203125
+[Step 13] Noise pred (text) mean: 0.0040283203125, std: 0.413330078125
+[Step 13] Noise pred (final) mean: 0.0225372314453125, std: 0.509765625
+[Step 13] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 70%|███████████████████████████████████▋               | 14/20 [00:07<00:03,  1.79it/s]
+[Step 14] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 14] Noise pred mean: -0.0078125, std: 0.32177734375
+[Step 14] Noise pred (uncond) mean: -0.0088348388671875, std: 0.322021484375
+[Step 14] Noise pred (text) mean: -0.0067901611328125, std: 0.321533203125
+[Step 14] Noise pred (final) mean: 0.005496978759765625, std: 0.388671875
+[Step 14] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 75%|██████████████████████████████████████▎            | 15/20 [00:08<00:02,  1.79it/s]
+[Step 15] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 15] Noise pred mean: -0.01129150390625, std: 0.3369140625
+[Step 15] Noise pred (uncond) mean: -0.0120391845703125, std: 0.33642578125
+[Step 15] Noise pred (text) mean: -0.0105438232421875, std: 0.337158203125
+[Step 15] Noise pred (final) mean: -0.0015802383422851562, std: 0.391357421875
+[Step 15] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 80%|████████████████████████████████████████▊          | 16/20 [00:08<00:02,  1.79it/s]
+[Step 16] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 16] Noise pred mean: -0.00951385498046875, std: 0.390625
+[Step 16] Noise pred (uncond) mean: -0.010009765625, std: 0.389892578125
+[Step 16] Noise pred (text) mean: -0.00902557373046875, std: 0.391357421875
+[Step 16] Noise pred (final) mean: -0.0030994415283203125, std: 0.4345703125
+[Step 16] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 85%|███████████████████████████████████████████▎       | 17/20 [00:09<00:01,  1.79it/s]
+[Step 17] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 17] Noise pred mean: -0.00730133056640625, std: 0.420654296875
+[Step 17] Noise pred (uncond) mean: -0.007568359375, std: 0.419677734375
+[Step 17] Noise pred (text) mean: -0.007030487060546875, std: 0.421630859375
+[Step 17] Noise pred (final) mean: -0.0037860870361328125, std: 0.461669921875
+[Step 17] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 90%|█████████████████████████████████████████████▉     | 18/20 [00:10<00:01,  1.79it/s]
+[Step 18] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 18] Noise pred mean: -0.004863739013671875, std: 0.431640625
+[Step 18] Noise pred (uncond) mean: -0.004993438720703125, std: 0.430419921875
+[Step 18] Noise pred (text) mean: -0.004730224609375, std: 0.432861328125
+[Step 18] Noise pred (final) mean: -0.00315093994140625, std: 0.474365234375
+[Step 18] Updated latents mean: 0.2095947265625, std: 0.74267578125
+ 95%|████████████████████████████████████████████████▍  | 19/20 [00:10<00:00,  1.79it/s]
+[Step 19] Latent model input mean: 0.2095947265625, std: 0.74267578125
+[Step 19] Noise pred mean: -0.00391387939453125, std: 0.413818359375
+[Step 19] Noise pred (uncond) mean: -0.003940582275390625, std: 0.41259765625
+[Step 19] Noise pred (text) mean: -0.0038852691650390625, std: 0.415283203125
+[Step 19] Noise pred (final) mean: -0.00354766845703125, std: 0.454833984375
+[Step 19] Updated latents mean: 0.2095947265625, std: 0.74267578125
+100%|███████████████████████████████████████████████████| 20/20 [00:11<00:00,  1.79it/s]
+(RPG) root@C.13666495:/home/kubig/RPG-DiffusionMaster$ python RPG.py
+Loading pipeline components...: 100%|█████████████████████| 7/7 [00:02<00:00,  2.90it/s]
+Using hardcoded values instead of GPT API.
+Final split ratio: 0.25,0.25,0.25,0.25
+Regional Prompt: Captures the dog with an engaging head tilt, eyes bright with curiosity
+, and a playful grin. BREAK Shows the dog lying down, paws folded, with a calm expressio
+n, its fur slightly ruffled. BREAK Presents the dog mid-play, leaping with ears perked u
+p, full of energetic joy. BREAK Features the dog sitting serenely, a gentle breeze rustl
+ing its fur, with a calm and serene gaze.
+[[0.5, 0.5, 0.5, 0.5]]
+5
+prompt_embeds shape torch.Size([1, 385, 2048])
+Combined image saved at: visualize/combined_image.png
+Decoded image from latent saved at: visualize/decoded_image_from_latent.png
+latents shpae torch.Size([1, 4, 128, 128])
+User latents as noise mean: -1.7762184143066406e-05, std: 1.0
+combined latents shape torch.Size([1, 4, 128, 128])
+  0%|                                                            | 0/20 [00:00<?, ?it/s]
+[Step 0] Latent model input mean: -1.7762184143066406e-05, std: 1.0
+[Step 0] Noise pred mean: -0.041015625, std: 0.80712890625
+[Step 0] Noise pred (uncond) mean: -0.041229248046875, std: 0.806640625
+[Step 0] Noise pred (text) mean: -0.040771484375, std: 0.80712890625
+[Step 0] Noise pred (final) mean: -0.03802490234375, std: 0.80810546875
+[Step 0] Updated latents mean: 0.009307861328125, std: 1.0576171875
+  5%|██▌                                                 | 1/20 [00:00<00:11,  1.71it/s]
+[Step 1] Latent model input mean: 0.009307861328125, std: 1.0576171875
+[Step 1] Noise pred mean: -0.042510986328125, std: 0.8134765625
+[Step 1] Noise pred (uncond) mean: -0.042724609375, std: 0.8134765625
+[Step 1] Noise pred (text) mean: -0.04229736328125, std: 0.8134765625
+[Step 1] Noise pred (final) mean: -0.039886474609375, std: 0.8134765625
+[Step 1] Updated latents mean: 0.0220489501953125, std: 1.1298828125
+ 10%|█████▏                                              | 2/20 [00:01<00:10,  1.76it/s]
+[Step 2] Latent model input mean: 0.0220489501953125, std: 1.1298828125
+[Step 2] Noise pred mean: -0.04412841796875, std: 0.8212890625
+[Step 2] Noise pred (uncond) mean: -0.044342041015625, std: 0.8212890625
+[Step 2] Noise pred (text) mean: -0.043914794921875, std: 0.8212890625
+[Step 2] Noise pred (final) mean: -0.041473388671875, std: 0.8203125
+[Step 2] Updated latents mean: 0.0389404296875, std: 1.2236328125
+ 15%|███████▊                                            | 3/20 [00:01<00:09,  1.78it/s]
+[Step 3] Latent model input mean: 0.0389404296875, std: 1.2236328125
+[Step 3] Noise pred mean: -0.04638671875, std: 0.83056640625
+[Step 3] Noise pred (uncond) mean: -0.046539306640625, std: 0.8310546875
+[Step 3] Noise pred (text) mean: -0.046234130859375, std: 0.83056640625
+[Step 3] Noise pred (final) mean: -0.0443115234375, std: 0.8291015625
+[Step 3] Updated latents mean: 0.06182861328125, std: 1.345703125
+ 20%|██████████▍                                         | 4/20 [00:02<00:08,  1.79it/s]
+[Step 4] Latent model input mean: 0.06182861328125, std: 1.345703125
+[Step 4] Noise pred mean: -0.0489501953125, std: 0.841796875
+[Step 4] Noise pred (uncond) mean: -0.049072265625, std: 0.841796875
+[Step 4] Noise pred (text) mean: -0.048828125, std: 0.84130859375
+[Step 4] Noise pred (final) mean: -0.0474853515625, std: 0.8388671875
+[Step 4] Updated latents mean: 0.09259033203125, std: 1.5029296875
+ 25%|█████████████                                       | 5/20 [00:02<00:08,  1.80it/s]
+[Step 5] Latent model input mean: 0.09259033203125, std: 1.5029296875
+[Step 5] Noise pred mean: -0.051910400390625, std: 0.853515625
+[Step 5] Noise pred (uncond) mean: -0.05194091796875, std: 0.85400390625
+[Step 5] Noise pred (text) mean: -0.0518798828125, std: 0.853515625
+[Step 5] Noise pred (final) mean: -0.05145263671875, std: 0.85205078125
+[Step 5] Updated latents mean: 0.1337890625, std: 1.7041015625
+ 30%|███████████████▌                                    | 6/20 [00:03<00:07,  1.80it/s]
+[Step 6] Latent model input mean: 0.1337890625, std: 1.7041015625
+[Step 6] Noise pred mean: -0.0550537109375, std: 0.8662109375
+[Step 6] Noise pred (uncond) mean: -0.055023193359375, std: 0.8662109375
+[Step 6] Noise pred (text) mean: -0.055084228515625, std: 0.8662109375
+[Step 6] Noise pred (final) mean: -0.055267333984375, std: 0.86474609375
+[Step 6] Updated latents mean: 0.1876220703125, std: 1.9560546875
+ 35%|██████████████████▏                                 | 7/20 [00:03<00:07,  1.80it/s]
+[Step 7] Latent model input mean: 0.1876220703125, std: 1.9560546875
+[Step 7] Noise pred mean: -0.057891845703125, std: 0.87841796875
+[Step 7] Noise pred (uncond) mean: -0.05780029296875, std: 0.87841796875
+[Step 7] Noise pred (text) mean: -0.058013916015625, std: 0.87841796875
+[Step 7] Noise pred (final) mean: -0.059326171875, std: 0.87744140625
+[Step 7] Updated latents mean: 0.255859375, std: 2.26171875
+ 40%|████████████████████▊                               | 8/20 [00:04<00:06,  1.80it/s]
+[Step 8] Latent model input mean: 0.255859375, std: 2.26171875
+[Step 8] Noise pred mean: -0.06036376953125, std: 0.8896484375
+[Step 8] Noise pred (uncond) mean: -0.060211181640625, std: 0.8896484375
+[Step 8] Noise pred (text) mean: -0.060516357421875, std: 0.8896484375
+[Step 8] Noise pred (final) mean: -0.062255859375, std: 0.8896484375
+[Step 8] Updated latents mean: 0.3369140625, std: 2.603515625
+ 45%|███████████████████████▍                            | 9/20 [00:05<00:06,  1.80it/s]
+[Step 9] Latent model input mean: 0.3369140625, std: 2.603515625
+[Step 9] Noise pred mean: -0.061859130859375, std: 0.89697265625
+[Step 9] Noise pred (uncond) mean: -0.0616455078125, std: 0.89697265625
+[Step 9] Noise pred (text) mean: -0.062103271484375, std: 0.89697265625
+[Step 9] Noise pred (final) mean: -0.0648193359375, std: 0.89794921875
+[Step 9] Updated latents mean: 0.425048828125, std: 2.94921875
+ 50%|█████████████████████████▌                         | 10/20 [00:05<00:05,  1.80it/s]
+[Step 10] Latent model input mean: 0.425048828125, std: 2.94921875
+[Step 10] Noise pred mean: -0.0626220703125, std: 0.8984375
+[Step 10] Noise pred (uncond) mean: -0.06243896484375, std: 0.89794921875
+[Step 10] Noise pred (text) mean: -0.0628662109375, std: 0.8984375
+[Step 10] Noise pred (final) mean: -0.06524658203125, std: 0.900390625
+[Step 10] Updated latents mean: 0.5087890625, std: 3.251953125
+ 55%|████████████████████████████                       | 11/20 [00:06<00:05,  1.80it/s]
+[Step 11] Latent model input mean: 0.5087890625, std: 3.251953125
+[Step 11] Noise pred mean: -0.062744140625, std: 0.892578125
+[Step 11] Noise pred (uncond) mean: -0.062469482421875, std: 0.892578125
+[Step 11] Noise pred (text) mean: -0.06298828125, std: 0.89306640625
+[Step 11] Noise pred (final) mean: -0.06591796875, std: 0.89453125
+[Step 11] Updated latents mean: 0.57763671875, std: 3.466796875
+ 60%|██████████████████████████████▌                    | 12/20 [00:06<00:04,  1.80it/s]
+[Step 12] Latent model input mean: 0.57763671875, std: 3.466796875
+[Step 12] Noise pred mean: -0.060638427734375, std: 0.88037109375
+[Step 12] Noise pred (uncond) mean: -0.060333251953125, std: 0.88037109375
+[Step 12] Noise pred (text) mean: -0.060943603515625, std: 0.880859375
+[Step 12] Noise pred (final) mean: -0.0645751953125, std: 0.88232421875
+[Step 12] Updated latents mean: 0.626953125, std: 3.58984375
+ 65%|█████████████████████████████████▏                 | 13/20 [00:07<00:03,  1.80it/s]
+[Step 13] Latent model input mean: 0.626953125, std: 3.58984375
+[Step 13] Noise pred mean: -0.056427001953125, std: 0.8642578125
+[Step 13] Noise pred (uncond) mean: -0.056243896484375, std: 0.8642578125
+[Step 13] Noise pred (text) mean: -0.056610107421875, std: 0.8642578125
+[Step 13] Noise pred (final) mean: -0.058868408203125, std: 0.86474609375
+[Step 13] Updated latents mean: 0.6572265625, std: 3.64453125
+ 70%|███████████████████████████████████▋               | 14/20 [00:07<00:03,  1.80it/s]
+[Step 14] Latent model input mean: 0.6572265625, std: 3.64453125
+[Step 14] Noise pred mean: -0.050262451171875, std: 0.8486328125
+[Step 14] Noise pred (uncond) mean: -0.050048828125, std: 0.8486328125
+[Step 14] Noise pred (text) mean: -0.05047607421875, std: 0.8486328125
+[Step 14] Noise pred (final) mean: -0.0531005859375, std: 0.8486328125
+[Step 14] Updated latents mean: 0.67431640625, std: 3.65625
+ 75%|██████████████████████████████████████▎            | 15/20 [00:08<00:02,  1.80it/s]
+[Step 15] Latent model input mean: 0.67431640625, std: 3.65625
+[Step 15] Noise pred mean: -0.0430908203125, std: 0.83447265625
+[Step 15] Noise pred (uncond) mean: -0.042816162109375, std: 0.83447265625
+[Step 15] Noise pred (text) mean: -0.043365478515625, std: 0.83447265625
+[Step 15] Noise pred (final) mean: -0.0467529296875, std: 0.8349609375
+[Step 15] Updated latents mean: 0.68310546875, std: 3.650390625
+ 80%|████████████████████████████████████████▊          | 16/20 [00:08<00:02,  1.80it/s]
+[Step 16] Latent model input mean: 0.68310546875, std: 3.650390625
+[Step 16] Noise pred mean: -0.0357666015625, std: 0.8203125
+[Step 16] Noise pred (uncond) mean: -0.03558349609375, std: 0.8203125
+[Step 16] Noise pred (text) mean: -0.035980224609375, std: 0.8203125
+[Step 16] Noise pred (final) mean: -0.038421630859375, std: 0.82080078125
+[Step 16] Updated latents mean: 0.6875, std: 3.638671875
+ 85%|███████████████████████████████████████████▎       | 17/20 [00:09<00:01,  1.80it/s]
+[Step 17] Latent model input mean: 0.6875, std: 3.638671875
+[Step 17] Noise pred mean: -0.0306549072265625, std: 0.8046875
+[Step 17] Noise pred (uncond) mean: -0.030517578125, std: 0.8046875
+[Step 17] Noise pred (text) mean: -0.0308074951171875, std: 0.8046875
+[Step 17] Noise pred (final) mean: -0.032501220703125, std: 0.80517578125
+[Step 17] Updated latents mean: 0.68994140625, std: 3.626953125
+ 90%|█████████████████████████████████████████████▉     | 18/20 [00:10<00:01,  1.80it/s]
+[Step 18] Latent model input mean: 0.68994140625, std: 3.626953125
+[Step 18] Noise pred mean: -0.026611328125, std: 0.78955078125
+[Step 18] Noise pred (uncond) mean: -0.026458740234375, std: 0.78955078125
+[Step 18] Noise pred (text) mean: -0.026763916015625, std: 0.78955078125
+[Step 18] Noise pred (final) mean: -0.028656005859375, std: 0.78955078125
+[Step 18] Updated latents mean: 0.69091796875, std: 3.6171875
+ 95%|████████████████████████████████████████████████▍  | 19/20 [00:10<00:00,  1.80it/s]
+[Step 19] Latent model input mean: 0.69091796875, std: 3.6171875
+[Step 19] Noise pred mean: -0.022216796875, std: 0.77294921875
+[Step 19] Noise pred (uncond) mean: -0.022125244140625, std: 0.77294921875
+[Step 19] Noise pred (text) mean: -0.0223236083984375, std: 0.77294921875
+[Step 19] Noise pred (final) mean: -0.0235443115234375, std: 0.77294921875
+[Step 19] Updated latents mean: 0.69189453125, std: 3.6015625
+100%|███████████████████████████████████████████████████| 20/20 [00:11<00:00,  1.80it/s]
+(RPG) root@C.13666495:/home/kubig/RPG-DiffusionMaster$ ^C
+(RPG) root@C.13666495:/home/kubig/RPG-DiffusionMaster$ python RPG.py
+Loading pipeline components...: 100%|█████████████████████| 7/7 [00:02<00:00,  2.99it/s]
+Using hardcoded values instead of GPT API.
+Final split ratio: 0.25,0.25,0.25,0.25
+Regional Prompt: Captures the dog with an engaging head tilt, eyes bright with curiosity
+, and a playful grin. BREAK Shows the dog lying down, paws folded, with a calm expressio
+n, its fur slightly ruffled. BREAK Presents the dog mid-play, leaping with ears perked u
+p, full of energetic joy. BREAK Features the dog sitting serenely, a gentle breeze rustl
+ing its fur, with a calm and serene gaze.
+[[0.5, 0.5, 0.5, 0.5]]
+5
+prompt_embeds shape torch.Size([1, 385, 2048])
+Combined image saved at: visualize/combined_image.png
+Decoded image from latent saved at: visualize/decoded_image_from_latent.png
+latents shpae torch.Size([1, 4, 128, 128])
+User latents as noise mean: -1.7762184143066406e-05, std: 1.0
+combined latents shape torch.Size([1, 4, 128, 128])
+  0%|                                                            | 0/20 [00:00<?, ?it/s]
+[Step 0] Latent model input mean: -1.7762184143066406e-05, std: 1.0
+[Step 0] Noise pred mean: -0.041015625, std: 0.80712890625
+[Step 0] Noise pred (uncond) mean: -0.041229248046875, std: 0.806640625
+[Step 0] Noise pred (text) mean: -0.040771484375, std: 0.80712890625
+[Step 0] Noise pred (final) mean: -0.03802490234375, std: 0.80810546875
+[Step 0] Updated latents mean: 0.009307861328125, std: 1.0576171875
+  5%|██▌                                                 | 1/20 [00:00<00:11,  1.69it/s]
+[Step 1] Latent model input mean: 0.009307861328125, std: 1.0576171875
+[Step 1] Noise pred mean: -0.042510986328125, std: 0.8134765625
+[Step 1] Noise pred (uncond) mean: -0.042724609375, std: 0.8134765625
+[Step 1] Noise pred (text) mean: -0.04229736328125, std: 0.8134765625
+[Step 1] Noise pred (final) mean: -0.039886474609375, std: 0.8134765625
+[Step 1] Updated latents mean: 0.0220489501953125, std: 1.1298828125
+ 10%|█████▏                                              | 2/20 [00:01<00:10,  1.76it/s]
+[Step 2] Latent model input mean: 0.0220489501953125, std: 1.1298828125
+[Step 2] Noise pred mean: -0.04412841796875, std: 0.8212890625
+[Step 2] Noise pred (uncond) mean: -0.044342041015625, std: 0.8212890625
+[Step 2] Noise pred (text) mean: -0.043914794921875, std: 0.8212890625
+[Step 2] Noise pred (final) mean: -0.041473388671875, std: 0.8203125
+[Step 2] Updated latents mean: 0.0389404296875, std: 1.2236328125
+ 15%|███████▊                                            | 3/20 [00:01<00:09,  1.78it/s]
+[Step 3] Latent model input mean: 0.0389404296875, std: 1.2236328125
+[Step 3] Noise pred mean: -0.04638671875, std: 0.83056640625
+[Step 3] Noise pred (uncond) mean: -0.046539306640625, std: 0.8310546875
+[Step 3] Noise pred (text) mean: -0.046234130859375, std: 0.83056640625
+[Step 3] Noise pred (final) mean: -0.0443115234375, std: 0.8291015625
+[Step 3] Updated latents mean: 0.06182861328125, std: 1.345703125
+ 20%|██████████▍                                         | 4/20 [00:02<00:08,  1.79it/s]
+[Step 4] Latent model input mean: 0.06182861328125, std: 1.345703125
+[Step 4] Noise pred mean: -0.0489501953125, std: 0.841796875
+[Step 4] Noise pred (uncond) mean: -0.049072265625, std: 0.841796875
+[Step 4] Noise pred (text) mean: -0.048828125, std: 0.84130859375
+[Step 4] Noise pred (final) mean: -0.0474853515625, std: 0.8388671875
+[Step 4] Updated latents mean: 0.09259033203125, std: 1.5029296875
+ 25%|█████████████                                       | 5/20 [00:02<00:08,  1.79it/s]
+[Step 5] Latent model input mean: 0.09259033203125, std: 1.5029296875
+[Step 5] Noise pred mean: -0.051910400390625, std: 0.853515625
+[Step 5] Noise pred (uncond) mean: -0.05194091796875, std: 0.85400390625
+[Step 5] Noise pred (text) mean: -0.0518798828125, std: 0.853515625
+[Step 5] Noise pred (final) mean: -0.05145263671875, std: 0.85205078125
+[Step 5] Updated latents mean: 0.1337890625, std: 1.7041015625
+ 30%|███████████████▌                                    | 6/20 [00:03<00:07,  1.80it/s]
+[Step 6] Latent model input mean: 0.1337890625, std: 1.7041015625
+ 30%|███████████████▌                                    | 6/20 [00:03<00:07,  1.77it/s]
+Traceback (most recent call last):
+  File "/home/kubig/RPG-DiffusionMaster/RPG.py", line 29, in <module>
+    images = pipe(
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/utils/_contextlib.py", lin
+e 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/kubig/RPG-DiffusionMaster/RegionalDiffusion_xl.py", line 1352, in __call__
+    noise_pred = self.unet(
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/diffusers/models/unets/unet_2d_c
+ondition.py", line 1216, in forward
+    sample, res_samples = downsample_block(
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/diffusers/models/unets/unet_2d_b
+locks.py", line 1279, in forward
+    hidden_states = attn(
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/diffusers/models/transformers/tr
+ansformer_2d.py", line 397, in forward
+    hidden_states = block(
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/diffusers/models/attention.py",
+line 366, in forward
+    attn_output = self.attn2(
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kubig/RPG-DiffusionMaster/cross_attention.py", line 154, in forward
+    onx = matsepcalc(nx, conn, False, 2)
+  File "/home/kubig/RPG-DiffusionMaster/cross_attention.py", line 92, in matsepcalc
+    out = main_forward_diffusers(module, x, context, divide,userpp =True,isxl = self.isx
+l)
+  File "/home/kubig/RPG-DiffusionMaster/cross_attention.py", line 36, in main_forward_di
+ffusers
+    hidden_states = module.to_out[1](hidden_states)
+  File "/opt/conda/envs/RPG/lib/python3.9/site-packages/torch/nn/modules/module.py", lin
+e 1507, in _wrapped_call_impl
+    def _wrapped_call_impl(self, *args, **kwargs):
+KeyboardInterrupt
+
+(RPG) root@C.13666495:/home/kubig/RPG-DiffusionMaster$ python RPG.py
+Loading pipeline components...: 100%|█████████████████████| 7/7 [00:02<00:00,  2.96it/s]
+Using hardcoded values instead of GPT API.
+Final split ratio: 0.25,0.25,0.25,0.25
+Regional Prompt: Captures the dog with an engaging head tilt, eyes bright with curiosity
+, and a playful grin. BREAK Shows the dog lying down, paws folded, with a calm expressio
+n, its fur slightly ruffled. BREAK Presents the dog mid-play, leaping with ears perked u
+p, full of energetic joy. BREAK Features the dog sitting serenely, a gentle breeze rustl
+ing its fur, with a calm and serene gaze.
+[[0.5, 0.5, 0.5, 0.5]]
+5
+prompt_embeds shape torch.Size([1, 385, 2048])
+Combined image saved at: visualize/combined_image.png
+Decoded image from latent saved at: visualize/decoded_image_from_latent.png
+latents shpae torch.Size([1, 4, 128, 128])
+User latents as noise mean: -1.7762184143066406e-05, std: 1.0
+combined latents shape torch.Size([1, 4, 128, 128])
+  0%|                                                            | 0/20 [00:00<?, ?it/s]
+[Step 0] Latent model input mean: -1.7762184143066406e-05, std: 1.0
+[Step 0] Noise pred mean: -0.041015625, std: 0.80712890625
+[Step 0] Noise pred (uncond) mean: -0.041229248046875, std: 0.806640625
+[Step 0] Noise pred (text) mean: -0.040771484375, std: 0.80712890625
+[Step 0] Noise pred (final) mean: -0.03802490234375, std: 0.80810546875
+[Step 0] Updated latents mean: 0.009307861328125, std: 1.0576171875
+  5%|██▌                                                 | 1/20 [00:00<00:12,  1.58it/s]
+[Step 1] Latent model input mean: 0.009307861328125, std: 1.0576171875
+[Step 1] Noise pred mean: -0.042510986328125, std: 0.8134765625
+[Step 1] Noise pred (uncond) mean: -0.042724609375, std: 0.8134765625
+[Step 1] Noise pred (text) mean: -0.04229736328125, std: 0.8134765625
+[Step 1] Noise pred (final) mean: -0.039886474609375, std: 0.8134765625
+[Step 1] Updated latents mean: 0.0220489501953125, std: 1.1298828125
+ 10%|█████▏                                              | 2/20 [00:01<00:10,  1.71it/s]
+[Step 2] Latent model input mean: 0.0220489501953125, std: 1.1298828125
+[Step 2] Noise pred mean: -0.04412841796875, std: 0.8212890625
+[Step 2] Noise pred (uncond) mean: -0.044342041015625, std: 0.8212890625
+[Step 2] Noise pred (text) mean: -0.043914794921875, std: 0.8212890625
+[Step 2] Noise pred (final) mean: -0.041473388671875, std: 0.8203125
+[Step 2] Updated latents mean: 0.0389404296875, std: 1.2236328125
+ 15%|███████▊                                            | 3/20 [00:01<00:09,  1.75it/s]
+[Step 3] Latent model input mean: 0.0389404296875, std: 1.2236328125
+[Step 3] Noise pred mean: -0.04638671875, std: 0.83056640625
+[Step 3] Noise pred (uncond) mean: -0.046539306640625, std: 0.8310546875
+[Step 3] Noise pred (text) mean: -0.046234130859375, std: 0.83056640625
+[Step 3] Noise pred (final) mean: -0.0443115234375, std: 0.8291015625
+[Step 3] Updated latents mean: 0.06182861328125, std: 1.345703125
+ 20%|██████████▍                                         | 4/20 [00:02<00:09,  1.77it/s]
+[Step 4] Latent model input mean: 0.06182861328125, std: 1.345703125
+[Step 4] Noise pred mean: -0.0489501953125, std: 0.841796875
+[Step 4] Noise pred (uncond) mean: -0.049072265625, std: 0.841796875
+[Step 4] Noise pred (text) mean: -0.048828125, std: 0.84130859375
+[Step 4] Noise pred (final) mean: -0.0474853515625, std: 0.8388671875
+[Step 4] Updated latents mean: 0.09259033203125, std: 1.5029296875
+ 25%|█████████████                                       | 5/20 [00:02<00:08,  1.78it/s]
+[Step 5] Latent model input mean: 0.09259033203125, std: 1.5029296875
+[Step 5] Noise pred mean: -0.051910400390625, std: 0.853515625
+[Step 5] Noise pred (uncond) mean: -0.05194091796875, std: 0.85400390625
+[Step 5] Noise pred (text) mean: -0.0518798828125, std: 0.853515625
+[Step 5] Noise pred (final) mean: -0.05145263671875, std: 0.85205078125
+[Step 5] Updated latents mean: 0.1337890625, std: 1.7041015625
+ 30%|███████████████▌                                    | 6/20 [00:03<00:07,  1.79it/s]
+[Step 6] Latent model input mean: 0.1337890625, std: 1.7041015625
+[Step 6] Noise pred mean: -0.0550537109375, std: 0.8662109375
+[Step 6] Noise pred (uncond) mean: -0.055023193359375, std: 0.8662109375
+[Step 6] Noise pred (text) mean: -0.055084228515625, std: 0.8662109375
+[Step 6] Noise pred (final) mean: -0.055267333984375, std: 0.86474609375
+[Step 6] Updated latents mean: 0.1876220703125, std: 1.9560546875
+ 35%|██████████████████▏                                 | 7/20 [00:03<00:07,  1.79it/s]
+[Step 7] Latent model input mean: 0.1876220703125, std: 1.9560546875
+[Step 7] Noise pred mean: -0.057891845703125, std: 0.87841796875
+[Step 7] Noise pred (uncond) mean: -0.05780029296875, std: 0.87841796875
+[Step 7] Noise pred (text) mean: -0.058013916015625, std: 0.87841796875
+[Step 7] Noise pred (final) mean: -0.059326171875, std: 0.87744140625
+[Step 7] Updated latents mean: 0.255859375, std: 2.26171875
+ 40%|████████████████████▊                               | 8/20 [00:04<00:06,  1.80it/s]
+[Step 8] Latent model input mean: 0.255859375, std: 2.26171875
+[Step 8] Noise pred mean: -0.06036376953125, std: 0.8896484375
+[Step 8] Noise pred (uncond) mean: -0.060211181640625, std: 0.8896484375
+[Step 8] Noise pred (text) mean: -0.060516357421875, std: 0.8896484375
+[Step 8] Noise pred (final) mean: -0.062255859375, std: 0.8896484375
+[Step 8] Updated latents mean: 0.3369140625, std: 2.603515625
+ 45%|███████████████████████▍                            | 9/20 [00:05<00:06,  1.80it/s]
+[Step 9] Latent model input mean: 0.3369140625, std: 2.603515625
+[Step 9] Noise pred mean: -0.061859130859375, std: 0.89697265625
+[Step 9] Noise pred (uncond) mean: -0.0616455078125, std: 0.89697265625
+[Step 9] Noise pred (text) mean: -0.062103271484375, std: 0.89697265625
+[Step 9] Noise pred (final) mean: -0.0648193359375, std: 0.89794921875
+[Step 9] Updated latents mean: 0.425048828125, std: 2.94921875
+ 50%|█████████████████████████▌                         | 10/20 [00:05<00:05,  1.80it/s]
+[Step 10] Latent model input mean: 0.425048828125, std: 2.94921875
+[Step 10] Noise pred mean: -0.0626220703125, std: 0.8984375
+[Step 10] Noise pred (uncond) mean: -0.06243896484375, std: 0.89794921875
+[Step 10] Noise pred (text) mean: -0.0628662109375, std: 0.8984375
+[Step 10] Noise pred (final) mean: -0.06524658203125, std: 0.900390625
+[Step 10] Updated latents mean: 0.5087890625, std: 3.251953125
+ 55%|████████████████████████████                       | 11/20 [00:06<00:04,  1.80it/s]
+[Step 11] Latent model input mean: 0.5087890625, std: 3.251953125
+[Step 11] Noise pred mean: -0.062744140625, std: 0.892578125
+[Step 11] Noise pred (uncond) mean: -0.062469482421875, std: 0.892578125
+[Step 11] Noise pred (text) mean: -0.06298828125, std: 0.89306640625
+[Step 11] Noise pred (final) mean: -0.06591796875, std: 0.89453125
+[Step 11] Updated latents mean: 0.57763671875, std: 3.466796875
+ 60%|██████████████████████████████▌                    | 12/20 [00:06<00:04,  1.80it/s]
+[Step 12] Latent model input mean: 0.57763671875, std: 3.466796875
+[Step 12] Noise pred mean: -0.060638427734375, std: 0.88037109375
+[Step 12] Noise pred (uncond) mean: -0.060333251953125, std: 0.88037109375
+[Step 12] Noise pred (text) mean: -0.060943603515625, std: 0.880859375
+[Step 12] Noise pred (final) mean: -0.0645751953125, std: 0.88232421875
+[Step 12] Updated latents mean: 0.626953125, std: 3.58984375
+ 65%|█████████████████████████████████▏                 | 13/20 [00:07<00:03,  1.80it/s]
+[Step 13] Latent model input mean: 0.626953125, std: 3.58984375
+[Step 13] Noise pred mean: -0.056427001953125, std: 0.8642578125
+[Step 13] Noise pred (uncond) mean: -0.056243896484375, std: 0.8642578125
+[Step 13] Noise pred (text) mean: -0.056610107421875, std: 0.8642578125
+[Step 13] Noise pred (final) mean: -0.058868408203125, std: 0.86474609375
+[Step 13] Updated latents mean: 0.6572265625, std: 3.64453125
+ 70%|███████████████████████████████████▋               | 14/20 [00:07<00:03,  1.80it/s]
+[Step 14] Latent model input mean: 0.6572265625, std: 3.64453125
+[Step 14] Noise pred mean: -0.050262451171875, std: 0.8486328125
+[Step 14] Noise pred (uncond) mean: -0.050048828125, std: 0.8486328125
+[Step 14] Noise pred (text) mean: -0.05047607421875, std: 0.8486328125
+[Step 14] Noise pred (final) mean: -0.0531005859375, std: 0.8486328125
+[Step 14] Updated latents mean: 0.67431640625, std: 3.65625
+ 75%|██████████████████████████████████████▎            | 15/20 [00:08<00:02,  1.80it/s]
+[Step 15] Latent model input mean: 0.67431640625, std: 3.65625
+[Step 15] Noise pred mean: -0.0430908203125, std: 0.83447265625
+[Step 15] Noise pred (uncond) mean: -0.042816162109375, std: 0.83447265625
+[Step 15] Noise pred (text) mean: -0.043365478515625, std: 0.83447265625
+[Step 15] Noise pred (final) mean: -0.0467529296875, std: 0.8349609375
+[Step 15] Updated latents mean: 0.68310546875, std: 3.650390625
+ 80%|████████████████████████████████████████▊          | 16/20 [00:08<00:02,  1.80it/s]
+[Step 16] Latent model input mean: 0.68310546875, std: 3.650390625
+[Step 16] Noise pred mean: -0.0357666015625, std: 0.8203125
+[Step 16] Noise pred (uncond) mean: -0.03558349609375, std: 0.8203125
+[Step 16] Noise pred (text) mean: -0.035980224609375, std: 0.8203125
+[Step 16] Noise pred (final) mean: -0.038421630859375, std: 0.82080078125
+[Step 16] Updated latents mean: 0.6875, std: 3.638671875
+ 85%|███████████████████████████████████████████▎       | 17/20 [00:09<00:01,  1.80it/s]
+[Step 17] Latent model input mean: 0.6875, std: 3.638671875
+[Step 17] Noise pred mean: -0.0306549072265625, std: 0.8046875
+[Step 17] Noise pred (uncond) mean: -0.030517578125, std: 0.8046875
+[Step 17] Noise pred (text) mean: -0.0308074951171875, std: 0.8046875
+[Step 17] Noise pred (final) mean: -0.032501220703125, std: 0.80517578125
+[Step 17] Updated latents mean: 0.68994140625, std: 3.626953125
+ 90%|█████████████████████████████████████████████▉     | 18/20 [00:10<00:01,  1.80it/s]
+[Step 18] Latent model input mean: 0.68994140625, std: 3.626953125
+[Step 18] Noise pred mean: -0.026611328125, std: 0.78955078125
+[Step 18] Noise pred (uncond) mean: -0.026458740234375, std: 0.78955078125
+[Step 18] Noise pred (text) mean: -0.026763916015625, std: 0.78955078125
+[Step 18] Noise pred (final) mean: -0.028656005859375, std: 0.78955078125
+[Step 18] Updated latents mean: 0.69091796875, std: 3.6171875
+ 95%|████████████████████████████████████████████████▍  | 19/20 [00:10<00:00,  1.80it/s]
+[Step 19] Latent model input mean: 0.69091796875, std: 3.6171875
+[Step 19] Noise pred mean: -0.022216796875, std: 0.77294921875
+[Step 19] Noise pred (uncond) mean: -0.022125244140625, std: 0.77294921875
+[Step 19] Noise pred (text) mean: -0.0223236083984375, std: 0.77294921875
+[Step 19] Noise pred (final) mean: -0.0235443115234375, std: 0.77294921875
+[Step 19] Updated latents mean: 0.69189453125, std: 3.6015625
+100%|███████████████████████████████████████████████████| 20/20 [00:11<00:00,  1.79it/s]
+(RPG) root@C.13666495:/home/kubig/RPG-DiffusionMaster$ tmux capture-pane -pS -500 > /hom
+e/kubig/RPG-DiffusionMaster/recent_history
+
