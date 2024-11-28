@@ -222,6 +222,7 @@ class RegionalDiffusionXLPipeline(
         "add_time_ids",
         "negative_pooled_prompt_embeds",
         "negative_add_time_ids",
+        
     ]
 
     def __init__(
@@ -239,6 +240,14 @@ class RegionalDiffusionXLPipeline(
         add_watermarker: Optional[bool] = None,
     ):
         super().__init__()
+
+        if image_encoder is None:
+            image_encoder = CLIPVisionModelWithProjection.from_pretrained(
+                "openai/clip-vit-large-patch14",
+                torch_dtype=torch.float16
+            )
+        if feature_extractor is None:
+            feature_extractor = CLIPImageProcessor.from_pretrained("openai/clip-vit-large-patch14")
 
         self.register_modules(
             vae=vae,
@@ -393,14 +402,18 @@ class RegionalDiffusionXLPipeline(
                         )
 
                     prompt_embeds = text_encoder(text_input_ids.to(device), output_hidden_states=True)
+                    
 
                     # We are only ALWAYS interested in the pooled output of the final text encoder
                     pooled_prompt_embeds = prompt_embeds[0]
+
+                    print(" defined prompt embeds shape", pooled_prompt_embeds.shape)
                     if clip_skip is None:
                         prompt_embeds = prompt_embeds.hidden_states[-2]
                     else:
                         # "2" because SDXL always indexes from the penultimate layer.
                         prompt_embeds = prompt_embeds.hidden_states[-(clip_skip + 2)]
+                        print("prompt hidden: ",prompt_embeds.shape)
                     # print('sub_prompt_embeds:',prompt_embeds.shape)
                     regional_prompt_embeds.append(prompt_embeds)
                 prompt_embeds = torch.cat(regional_prompt_embeds, dim=1)
@@ -540,6 +553,68 @@ class RegionalDiffusionXLPipeline(
             uncond_image_embeds = torch.zeros_like(image_embeds)
 
             return image_embeds, uncond_image_embeds
+
+
+    def regional_encode_image(self, images, device, num_images_per_prompt, output_hidden_states=None):
+        dtype = next(self.image_encoder.parameters()).dtype
+
+        # images가 리스트가 아니면 리스트로 변환
+        if not isinstance(images, list):
+            images = [images]
+
+        print("Images inside regional_encode_image:", images)
+
+        # 이미지 임베딩을 저장할 리스트 초기화
+        image_embeds_list = []
+        uncond_image_embeds_list = []
+
+        for image in images:
+            print("Processing image:", image)
+            if not isinstance(image, torch.Tensor):
+                image = self.feature_extractor(image, return_tensors="pt").pixel_values
+
+            image = image.to(device=device, dtype=dtype)
+
+            if output_hidden_states:
+                print("Output hidden states is True.")
+                # 히든 스테이트 얻기
+                image_enc_outputs = self.image_encoder(image, output_hidden_states=True)
+                image_enc_hidden_states = image_enc_outputs.hidden_states[-2]
+                print("Image hidden states shape:", image_enc_hidden_states.shape)
+                # 필요한 경우 num_images_per_prompt에 따라 반복
+                image_enc_hidden_states = image_enc_hidden_states.repeat_interleave(num_images_per_prompt, dim=0)
+                image_embeds_list.append(image_enc_hidden_states)
+                print("Appended image_enc_hidden_states to image_embeds_list.")
+                # 무조건부(unconditional) 이미지 임베딩 처리
+                uncond_image = torch.zeros_like(image)
+                uncond_image_enc_outputs = self.image_encoder(uncond_image, output_hidden_states=True)
+                uncond_image_enc_hidden_states = uncond_image_enc_outputs.hidden_states[-2]
+                uncond_image_enc_hidden_states = uncond_image_enc_hidden_states.repeat_interleave(
+                    num_images_per_prompt, dim=0
+                )
+                uncond_image_embeds_list.append(uncond_image_enc_hidden_states)
+                print("Appended uncond_image_enc_hidden_states to uncond_image_embeds_list.")
+            else:
+                print("Output hidden states is False.")
+                image_embeds = self.image_encoder(image).image_embeds
+                image_embeds = image_embeds.repeat_interleave(num_images_per_prompt, dim=0)
+                image_embeds_list.append(image_embeds)
+
+                uncond_image_embeds = torch.zeros_like(image_embeds)
+                uncond_image_embeds_list.append(uncond_image_embeds)
+        print("Length of image_embeds_list:", len(image_embeds_list))
+        print("Length of uncond_image_embeds_list:", len(uncond_image_embeds_list))
+
+        # 시퀀스 길이 차원(dim=1)으로 연결하여 최종 임베딩 생성
+        if output_hidden_states:
+            image_embeds = torch.cat(image_embeds_list, dim=1)
+            uncond_image_embeds = torch.cat(uncond_image_embeds_list, dim=1)
+        else:
+            image_embeds = torch.cat(image_embeds_list, dim=-1)  # 또는 필요에 따라 dim=1 사용
+            uncond_image_embeds = torch.cat(uncond_image_embeds_list, dim=-1)
+
+        return image_embeds, uncond_image_embeds
+
 
     # Copied from diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion.StableDiffusionPipeline.prepare_ip_adapter_image_embeds
     def prepare_ip_adapter_image_embeds(
@@ -1217,6 +1292,7 @@ class RegionalDiffusionXLPipeline(
         if image_path is not None:
             # 이미지 로드 및 전처리
             frames = [Image.open(path).convert("RGB") for path in image_path]
+
             split_ratios = [r.split(',') for r in split_ratio.split(';')]
             print("split:", split_ratios)
             total_width, total_height = width, height
@@ -1232,8 +1308,18 @@ class RegionalDiffusionXLPipeline(
             # 이미지를 텐서로 변환
             combined_image_np = np.array(combined_image)
             combined_image_tensor = torch.from_numpy(combined_image_np).permute(2, 0, 1).unsqueeze(0).to(self.vae.dtype)
+            feature_extracted = self.feature_extractor(combined_image_tensor, return_tensors="pt").pixel_values.to(device)
+
             combined_image_tensor = combined_image_tensor / 255.0
             combined_image_tensor = combined_image_tensor.to(device)
+            frames = [Image.open(path).convert("RGB") for path in image_path]
+            # 사용자 이미지 인코딩
+            image_embeds, uncond_image_embeds = self.regional_encode_image(
+                frames,  # 이미지의 리스트
+                device=device,
+                num_images_per_prompt=num_images_per_prompt,
+                output_hidden_states=True  # 히든 스테이트를 얻기 위해 True로 설정
+            )
 
             # VAE를 사용하여 잠재 공간으로 인코딩
             user_image_latent = self.vae.encode(combined_image_tensor).latent_dist.sample()
@@ -1333,7 +1419,12 @@ class RegionalDiffusionXLPipeline(
             add_time_ids = torch.cat([negative_add_time_ids, add_time_ids], dim=0)
 
         prompt_embeds = prompt_embeds.to(device)
+        print("real prompt_embeds shape", prompt_embeds.shape)
+        ## gal a ggi oo gi
+        #prompt_embeds= torch.cat([image_embeds, image_embeds], dim=0)
+        print("image_prompt_embeds shape", prompt_embeds.shape)
         add_text_embeds = add_text_embeds.to(device)
+        print("add text_embeds shape", add_text_embeds.shape)
         add_time_ids = add_time_ids.to(device).repeat(batch_size * num_images_per_prompt, 1)
 
         if ip_adapter_image is not None or ip_adapter_image_embeds is not None:
@@ -1391,9 +1482,10 @@ class RegionalDiffusionXLPipeline(
                 print(f"[Step {i}] Latent model input mean: {latent_model_input.mean().item()}, std: {latent_model_input.std().item()}")
 
                 # 노이즈 예측
-                added_cond_kwargs = {"text_embeds": add_text_embeds, "time_ids": add_time_ids}
-                if ip_adapter_image is not None or ip_adapter_image_embeds is not None:
+                added_cond_kwargs = {"text_embeds": add_text_embeds, "time_ids": add_time_ids} #1 77 768 --> 1 1024
+                if image_embeds is not None:
                     added_cond_kwargs["image_embeds"] = image_embeds
+                    print("added", image_embeds.shape) #1,768
 
                 # U-Net을 통한 노이즈 예측
                 noise_pred = self.unet(

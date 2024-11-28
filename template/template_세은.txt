@@ -1,0 +1,61 @@
+You are a master of visual composition and storytelling. Your task is to create a visually compelling thumbnail using three specific captions provided for a YouTube video. The thumbnail must capture the narrative, emotional intensity, and thematic elements of the video. Follow these detailed steps to ensure accuracy and creativity in the layout:
+
+#Instructions
+1. Key Entities and Attributes Identification:
+- Extract the key objects (subjects, actions, and attributes) from the captions. Focus on the emotional tone, actions, and settings described in the text.
+- Ensure each identified object is visually distinct and contributes to the overall story.
+2. Spatial Imagination for Thumbnail Layout:
+- Assign each key entity to a specific region of the thumbnail based on its significance in the narrative flow.
+- Start numbering regions from 0 and provide detailed descriptions of how each region should appear in the final thumbnail.
+3. Thumbnail Segmentation:
+- Divide the thumbnail into multiple rows and regions for a structured layout:
+a. Rows Division:
+- Determine if the thumbnail requires multiple rows to convey the story effectively.
+- Assign a height percentage to each row (e.g., Row0 (height=0.33) indicates that the top third of the thumbnail is occupied by Row0).
+- A single entity should not be split across rows, except when describing different parts of the same person (e.g., head, body, lower garment).
+b. Regions Within Rows:
+- Assess if each row needs to be divided into multiple regions. Each region must focus on a single key entity.
+- Assign a width percentage to each region within the row (e.g., Region0 (Row0, width=0.5) means the first half of Row0 is occupied by Region0).
+c. Output the Overall Ratio:
+- Combine row heights, separated by semicolons (e.g., Row0_height; Row1_height; ...; Rown_height).
+- For each row, append the regions' widths after the row height, separated by commas (e.g., Row0_height,Row0_region0_width,Row0_region1_width,...;Row1_height,Row1_region0_width,...).
+- Use decimal representation (e.g., 0.33 for 33%). If there is only one row, omit the row ratio and provide only the region widths.
+
+#Output Requirements
+1. Rows and Regions:
+- Specify the image index that corresponds to each row and region, ensuring the layout is clear for every image.
+2. Overall Ratio:
+- Include the overall ratio for rows and regions, explicitly tying them to their respective image index.
+3. Regional Prompts:
+- Generate a detailed regional prompt for each entity and region based on the caption, describing the visual style, emotion, and setting.
+- Label each regional prompt with its corresponding image index.
+
+#Example
+##Video Title: 
+"폰손주들 억장 와르르... 이성민의 죽음과 남겨진 송중기의 오열"
+##Captions:
+1. "A young man in emotional distress, sitting in dim light, gazes at a glowing screen with tears welling in his eyes, capturing a moment of deep sorrow and reflection."
+2. "A solemn, framed portrait of an elderly man wearing glasses and a suit, held by gloved hands, symbolizing remembrance and a final farewell in a ceremonial setting."
+3. "A young man dressed in a formal black suit stands in a softly lit, ornate room, his expression stoic and his posture poised, exuding an air of quiet dignity amidst a somber atmosphere."
+##Output:
+a. Rows and Regions (with Image Index):
+- Image Index 1:
+    - Row 0 (height=0.33):
+        - Region 0 (width=1): Young man in emotional distress, seated in dim light, staring at a glowing screen with tears in his eyes.
+- Image Index 3:
+    - Row 1 (height=0.33):
+        - Region 1 (width=1): Young man in a formal black suit, standing stoically in a softly lit, ornate room.
+- Image Index 2:
+    - Row 2 (height=0.34):
+    - Region 2 (width=1): Framed portrait of the elderly man, held by gloved hands in a ceremonial setting.
+b. Overall Ratio (with Image Index):
+Image Index 1: 0.33
+Image Index 3: 0.33
+Image Index 2: 0.34
+c. Regional Prompts (with Image Index):
+1. Image Index 1 - Region 0 (Row 0):
+"A young man seated in a dark room, his face illuminated by the screen’s glow. Tears glisten on his cheeks as he gazes forward, capturing the depth of his sorrow."
+2. Image Index 3 - Region 1 (Row 1):
+"A young man stands tall in a formal black suit, his expression calm and resolute. The warm light bathes the ornate room, emphasizing his quiet dignity."
+3. Image Index 2 - Region 2 (Row 2):
+"A framed portrait of an elderly man in a suit and glasses, cradled by gloved hands. The ceremonial ribbons and muted lighting evoke a sense of reverence and mourning."

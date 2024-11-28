@@ -12,7 +12,7 @@ from transformers import LlamaForCausalLM, LlamaTokenizer
 def GPT4(prompt,key):
     url = "https://api.openai.com/v1/chat/completions"
     api_key = key
-    with open('template/template.txt', 'r') as f:
+    with open('template/template_세은.txt', 'r') as f:
         template=f.readlines()
     user_textprompt=f"Caption:{prompt} \n Let's think step by step:"
     
